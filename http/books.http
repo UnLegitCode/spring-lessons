@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:8080/books
+
+### create
+POST {{baseUrl}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Clean Code",
+  "description": "Good book for programming beginners",
+  "authorId": "90be29fb-8f11-4561-a96a-08cd4802e9d7"
+}
+
+### list author books
+GET {{baseUrl}}/by-author/90be29fb-8f11-4561-a96a-08cd4802e9d7
+Accept: application/json
+
+### delete
+DELETE {{baseUrl}}/7d2bf3c6-d54b-4681-92d7-b9379edca891
+Accept: application/json
